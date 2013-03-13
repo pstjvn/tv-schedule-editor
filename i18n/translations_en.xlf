@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="SoyMsgBundle" datatype="x-soy-msg-bundle" xml:space="preserve" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="1295614462098694869" datatype="html">
+        <source>Preview</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: preview video playback</note>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <target/>
+        <note priority="1" from="description">Cancel</note>
+      </trans-unit>
+      <trans-unit id="2671643902824593326" datatype="html">
+        <source>Select date</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: select date from callendar</note>
+      </trans-unit>
+      <trans-unit id="3658146438866525141" datatype="html">
+        <source>This application is developed for Sysmaster Corp.© by <x id="START_LINK"/>Peter Janakiev<x id="END_LINK"/>. All right reserver for Sysmaster Corp.©</source>
+        <target/>
+        <note priority="1" from="description">copyright notice</note>
+      </trans-unit>
+      <trans-unit id="3768927257183755959" datatype="html">
+        <source>Save</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: save the current state of the time line</note>
+      </trans-unit>
+      <trans-unit id="3797570084942068182" datatype="html">
+        <source>Select</source>
+        <target/>
+        <note priority="1" from="description">Select</note>
+      </trans-unit>
+      <trans-unit id="3804037606764273869" datatype="html">
+        <source>Cut</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: cut the item at the marker</note>
+      </trans-unit>
+      <trans-unit id="3845185958891849368" datatype="html">
+        <source>End Time</source>
+        <target/>
+        <note priority="1" from="description">End time label</note>
+      </trans-unit>
+      <trans-unit id="4204880191779081093" datatype="html">
+        <source>Start Time</source>
+        <target/>
+        <note priority="1" from="description">Start time label</note>
+      </trans-unit>
+      <trans-unit id="4899062938754891176" datatype="html">
+        <source>Program name</source>
+        <target/>
+        <note priority="1" from="description">Title for the section - program name</note>
+      </trans-unit>
+      <trans-unit id="5958498634454277693" datatype="html">
+        <source>Adds</source>
+        <target/>
+        <note priority="1" from="description">Adertizement video tab title</note>
+      </trans-unit>
+      <trans-unit id="6205355627445317276" datatype="html">
+        <source>Content</source>
+        <target/>
+        <note priority="1" from="description">Content tab title.</note>
+      </trans-unit>
+      <trans-unit id="6421460271971606186" datatype="html">
+        <source>Zoom</source>
+        <target/>
+        <note priority="1" from="description">Title of zoom/scale control</note>
+      </trans-unit>
+      <trans-unit id="6576335986797171835" datatype="html">
+        <source>TV Schedule editor</source>
+        <target/>
+        <note priority="1" from="description">TV Schedule editor app title</note>
+      </trans-unit>
+      <trans-unit id="7022070615528435141" datatype="html">
+        <source>Delete</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: delete the item that is highlighed</note>
+      </trans-unit>
+      <trans-unit id="7274592380649065891" datatype="html">
+        <source>Select channel</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: select channel</note>
+      </trans-unit>
+      <trans-unit id="7385160636957089888" datatype="html">
+        <source>Library</source>
+        <target/>
+        <note priority="1" from="description">Title for the library panes.</note>
+      </trans-unit>
+      <trans-unit id="7831490503421072560" datatype="html">
+        <source>Navigate timeline</source>
+        <target/>
+        <note priority="1" from="description">Titile of scroll control</note>
+      </trans-unit>
+      <trans-unit id="7938084004550907360" datatype="html">
+        <source>Please select one</source>
+        <target/>
+        <note priority="1" from="description">Please select one</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

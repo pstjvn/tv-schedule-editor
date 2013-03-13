@@ -1,0 +1,34 @@
+@def PSTJ_BUTTON_BORDER_RADIUS 3px;
+@def PSTJ_BUTTON_TEXT_COLOR #EFEFEF;
+@def PSTJ_BUTTON_BASE_COLOR #657896;
+@def PSTJ_BUTTON_BASE_HIGHLIGHT #4773AC;
+@def PSTJ_BUTTON_BORDER 1px solid PSTJ_BUTTON_TEXT_COLOR;
+@def PSTJ_BUTTON_PADDING 3px;
+
+.pstj-button {
+	position: relative;
+	border-radius: PSTJ_BUTTON_BORDER_RADIUS;
+	background-color: PSTJ_BUTTON_BASE_COLOR;
+	padding: PSTJ_BUTTON_PADDING;
+	outline: none;
+	color: PSTJ_BUTTON_TEXT_COLOR;
+	border: PSTJ_BUTTON_BORDER;
+	cursor: pointer;
+}
+
+.pstj-button:hover {
+	background-color: PSTJ_BUTTON_BASE_HIGHLIGHT;
+}
+
+.pstj-button:active {
+	top: PSTJ_BUTTON_BORDER_RADIUS;
+}
+
+
+/* CUSTOMIZATIONS */
+
+.program-button, .date-button {
+	float: right;
+	margin: 0 6px;
+}
+

@@ -1,0 +1,64 @@
+.goog-date-picker {
+  background-color:BACKGROUND_COLOR;
+  margin: 5px;
+  padding: 5px;
+  position: absolute;
+  box-shadow: 2px 2px 2px black;
+  z-index: 100;
+}
+
+.goog-date-picker-btn {
+  background-color: OUTLINE_COLOR;
+  color: BACKGROUND_COLOR;
+  padding: 0 2px;
+  border: 1px solid #98aebf;;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.goog-date-picker-btn:hover {
+  box-shadow: 0 0 2px 1px OUTLINE_COLOR;
+}
+
+.goog-date-picker-date {
+  color: TEXT_COLOR;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.goog-date-picker-week {
+  color: black;
+}
+
+.goog-date-picker-wday {
+  font-size: 12px;
+}
+
+.goog-date-picker-menu ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 5px;
+}
+
+.goog-date-picker-menu li {
+  color: TEXT_COLOR;
+  cursor: pointer;
+}
+.goog-date-picker-menu li.goog-date-picker-menu-selected {
+  color: OUTLINE_COLOR;
+}
+
+
+.goog-date-picker-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid gray;
+  -moz-user-focus: normal;
+  z-index: 1;
+  outline: none;
+}
+
+.goog-date-picker-month {
+  width: 12ex;
+}

@@ -1,0 +1,8 @@
+.pstj-button {
+	display: inline-block;
+}
+
+.toolbar-padding {
+  display: inline-block;
+  width: 20px;
+}

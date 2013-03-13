@@ -1,0 +1,4 @@
+.record.load-indicator {
+	width: 810px;
+	padding: 10px;
+}

@@ -1,0 +1,22 @@
+/**
+ * FIX for offsetX missing in FF, instead layerX is used and it needs
+ * positioned element to be correctly available as offsetX
+ */
+canvas {
+	position: relative;
+}
+
+#timeline {
+  opacity: 1;
+	transition: opacity 2.5s;
+	/** @alternate */ -webkit-transition: opacity 2.5s;
+	/** @alternate */ -moz-transition: opacity 2.5s;
+}
+
+#timeline.loading {
+  opacity: 0;
+}
+
+#timeline.disabled {
+  opacity: 0.5;
+}

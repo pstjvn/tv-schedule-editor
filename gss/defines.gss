@@ -1,0 +1,18 @@
+/** referenced bg colour, use it to simulate transparency. */
+@def BODY_BACKGROUND_COLOR #FFE8E8;
+
+/** The default background color for everything. */
+@def BACKGROUND_COLOR #E1E1E1;
+/** The default text color for everything. */
+@def TEXT_COLOR #272727;
+/** The outline color: focus rings, focus border etc.; */
+@def OUTLINE_COLOR #95DBE0;
+@def FONT 'Arial';
+
+
+/** Widget specifics: define a visual separation of widgets */
+@def WIDGET_BACKGROUND_COLOR #CCCCCC;
+@def WIDGET_TEXT_COLOR #FFFFFF;
+@def WIDGET_BORDER_COLOR #E24A4A;
+
+

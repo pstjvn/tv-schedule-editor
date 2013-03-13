@@ -1,0 +1,17 @@
+.scroll-view {
+	width: 880px;
+	/* we need to set height programatically
+	height: 400px; */
+	margin: 0;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height 1s;
+	/** @alternate */ -webkit-transition: max-height 1s;
+}
+
+.custom-scroll-area {
+	transition: transform 800ms;
+	/** @alternate */ -webkit-transition: -webkit-transform 800ms;
+}

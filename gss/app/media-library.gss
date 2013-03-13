@@ -1,0 +1,7 @@
+.tl-media-library {
+	width: 880px;
+}
+
+.tl-media-library .custom-scroll-div {
+	background-color: #474755;
+}

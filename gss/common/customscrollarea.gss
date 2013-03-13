@@ -1,0 +1,80 @@
+/* Defines the size (width) of the scroll bar */
+@def CUSTOM_SCROLL_BAR_WIDTH 21px;
+
+/* Defines the size (width) of the scroll rail */
+@def SCROLL_BAR_RAIL_WIDTH 1px;
+
+/* This is the whole widget, it should be put in an element, that uses % to change its size and has overflow hidden */
+.custom-scroll-area  {
+  width: 100%;
+  height: 100%;
+  /** This needto be removed for some case in admin...!!! */
+  position: relative;
+}
+
+/**
+ * Override the slider behaviour to make it act like scroll bar.
+ */
+.custom-scroll-bar.goog-slider {
+  width: CUSTOM_SCROLL_BAR_WIDTH;
+  height: 100%;
+  background-color: #f1f1f1;
+  outline: 0;
+  position:absolute;
+  right: 0;
+
+  /* float should be set by the component */
+}
+
+
+/* This is the scroll bar middle line, used to simulate scroll rail raw */
+.custom-scroll-bar-line {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: sub(divide(CUSTOM_SCROLL_BAR_WIDTH, 2), divide(SCROLL_BAR_RAIL_WIDTH, 2));
+  background-color: black;
+  width: SCROLL_BAR_RAIL_WIDTH;
+}
+
+/* This is for the goog slider, without it it cannot function properly */
+.goog-slider-vertical {
+  overflow: hidden;
+}
+
+/* This is for the goog slider's thumb, without it, it cannot function properly */
+.goog-slider-thumb {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+}
+
+/* This is for the scroll bar thumb */
+.custom-scroll-bar-thumb {
+  left: 0;
+  background-color: transparent;
+  background-image: url("../assets/ring.png");
+  width: CUSTOM_SCROLL_BAR_WIDTH;
+  height: CUSTOM_SCROLL_BAR_WIDTH;
+}
+
+/* This is the internal container, that will hold the actuall div with scrolls */
+.custom-scroll-internal {
+  /* the width should be calculated by the JS engine */
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height: 100%;
+}
+
+.custom-scroll-div {
+  /* should be set by the engine */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.custom-scroll-bar, .custom-scroll-bar-thumb {
+  cursor: pointer;
+}
+

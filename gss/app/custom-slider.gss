@@ -1,0 +1,17 @@
+.goog-slider.zoom-slider {
+  width: 48%;
+  position: relative;
+ 	left: 0;
+}
+.goog-slider.scroll-slider {
+	width: 48%;
+	position: relative;
+	top: -21px;
+	left: 52%;
+}
+
+.custom-scroll-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

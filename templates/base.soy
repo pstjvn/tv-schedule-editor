@@ -1,0 +1,133 @@
+{namespace tl.template}
+
+
+/**
+ * The base for the application, this is inserted directly into the BODY tag.
+ */
+{template .base}
+  <div class="{css base}">
+    <h3>{msg desc="TV Schedule editor app title"}TV Schedule editor{/msg}</h3>
+
+    <div id="timeline" class="{css loading}"></div>
+
+    <div class="{css goog-slider} {css zoom-slider}">
+      <div class="{css custom-scroll-bar-line}"></div>
+      <div class="{css goog-slider-thumb}" title="{msg desc="Title of zoom/scale control"}Zoom{/msg}"></div>
+    </div>
+
+    <div class="{css goog-slider} {css scroll-slider}">
+      <div class="{css custom-scroll-bar-line}"></div>
+      <div class="{css goog-slider-thumb}" title="{msg desc="Titile of scroll control"}Navigate timeline{/msg}"></div>
+    </div>
+
+    {call .programView /}
+
+    {call .controls /}
+
+    {call .library /}
+
+    {call .copyright /}
+
+  </div>
+{/template}
+
+
+/**
+ * The video preview panel.
+ */
+{template .preview}
+  <div class="{css video-preview}">
+    <div class="{css video-container}">
+      <video></video>
+    </div>
+  </div>
+{/template}
+
+/**
+ * The copyright message
+ */
+{template .copyright}
+  <div class="{css copyright}">{msg desc="copyright notice"}This application is developed for Sysmaster Corp.© by <a href="mailto:regardingscot@gmail.com">Peter Janakiev</a>. All right reserver for Sysmaster Corp.©{/msg}</div>
+{/template}
+
+/**
+ * The control buttons list.
+ */
+{template .controls}
+  <div class="{css program-controls}">
+    <div class="{css goog-button} {css pstj-button}" data-action="save" title="{msg desc="Inscription on a button: save the current state of the time line"}Save{/msg}"><img src="assets/save.png" /></div>
+    <div class="{css goog-button} {css pstj-button}" data-action="select-channel" title="{msg desc="Inscription on a button: select channel"}Select channel{/msg}"><img src="assets/channel.png" /></div>
+    <div class="{css goog-button} {css pstj-button}" data-action="select-date" title="{msg desc="Inscription on a button: select date from callendar"}Select date{/msg}"><img src="assets/date.png" /></div>
+    <div class="{css toolbar-padding}"></div>
+    <div class="{css goog-button} {css pstj-button}" data-action="cut" title="{msg desc="Inscription on a button: cut the item at the marker"}Cut{/msg}"><img src="assets/cut.png" /></div>
+    <div class="{css goog-button} {css pstj-button}" data-action="delete" title="{msg desc="Inscription on a button: delete the item that is highlighed"}Delete{/msg}"><img src="assets/delete.png" /></div>
+    <div class="{css toolbar-padding}"></div>
+    <div class="{css goog-button} {css pstj-button}" data-action="help" title="{msg desc="Inscription on a button: display help"}Preview{/msg}"><img src="assets/help.png" /></div>
+  </div>
+{/template}
+
+
+/**
+ * The program view - display the currently selected program item.
+ */
+{template .programView}
+  <div class="{css program-view} {css cloak}">
+    <div  class="{css program-view-name}" data-model="name" data-filter="prepend({msg desc="Title for the section - program name"}Program name{/msg}: )">&nbsp;</div>
+    <div style="float:right;">
+      <span class="{css program-view-time-start}" data-model="start_time" data-filter='timeoffset(HH:mm:ss)|prepend(<span class="{css program-view-time-label}">{msg  desc="Start time label"}Start Time{/msg}:&nbsp</span><span class="{css program-view-time-value}">)|append(</span>)'></span>
+      &nbsp;
+      <span class="{css program-view-time-end}" data-model="end_time" data-filter='timeoffset(HH:mm:ss)|prepend(<span class="{css program-view-time-label}">{msg desc="End time label"}End Time{/msg}:&nbsp</span><span class="{css program-view-time-value}">)|append(</span>)'></span>
+    </div>
+  </div>
+{/template}
+
+/**
+ * @param thumbnail
+ * @param title
+ */
+{template .Record}
+  <div class="{css record} {css drag-template}">
+    <div class="{css record-thumbnail}">
+      <div class="{css thumb-holder}">
+        <img src="{$thumbnail}"/>
+      </div>
+    </div>
+    <div class="{css record-name}">{$title}</div>
+  </div>
+{/template}
+
+/**
+ * @param thumbnail The image to use in the grad element.
+ * @param title The item title to use.
+ */
+{template .DragElement}
+  <div class="{css drag-record}">
+    <img src="{$thumbnail}" />
+    <span class="{css title}">{$title}</span>
+  </div>
+{/template}
+
+/**
+ * The media library extracted.
+ */
+{template .library}
+  <div class="{css tl-media-library} {css use-decorate} {css content-list}">
+    <div class="{css list-label}">{msg desc="Title for the library panes."}Library{/msg}</div>
+    <div class="{css goog-tab-bar}  {css goog-tab-bar-top}">
+      <div class="{css right} {css goog-tab}" data-type="content">{msg desc="Content tab title."}Content{/msg}</div>
+      <div class="{css right} {css goog-tab} {css goog-tab-selected}" data-type="ads">{msg desc="Adertizement video tab title"}Adds{/msg}</div>
+    </div>
+    <div class="{css goog-tab-bar-clear}"></div>
+    <div class="{css goog-tab-content}">
+      <div class="{css scroll-view}"></div>
+    </div>
+  </div>
+{/template}
+
+/**
+ * The load indicator widget for the library widget.
+ * @param text The text to display.
+ */
+{template .LoadIndicator}
+  <div class="{css record} {css load-indicator}">{$text}</div>
+{/template}

@@ -1,0 +1,31 @@
+
+.record {
+	width: 160px;
+	background-color: #F1F1F1;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 15px -2px #969696;
+	margin: 15px;
+	padding: 10px;
+	display: inline-block;
+}
+.record:hover {
+  background-color: #ECF5FF;
+  box-shadow: inset 0px 0px 15px -2px #2079DA;
+  border: 1px solid #61ADFF;
+}
+.record-thumbnail {
+	text-align: center;
+	background-color: #BEBEBE;
+	width: 100%;
+	height: 110px;
+	margin: auto;
+	padding: 10px 0;
+}
+.record-thumbnail img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.record-name {
+	margin: 10px 0 0 0;
+}

@@ -1,0 +1,71 @@
+/* Defines the size (width) of the scroll bar */
+@def CUSTOM_SCROLL_BAR_WIDTH 21px;
+
+/* Defines the size (width) of the scroll rail */
+@def SCROLL_BAR_RAIL_WIDTH 1px;
+
+/**
+ * Defines how the slider will look in general.
+ */
+.goog-slider {
+  background-color: transparent;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/**
+ * Vertical view specifities.
+ */
+.goog-slider-vertical {
+  width: CUSTOM_SCROLL_BAR_WIDTH;
+  height: 100%;
+}
+
+/**
+ * Horizontal view specifities.
+ */
+.goog-slider-horizontal {
+  height: CUSTOM_SCROLL_BAR_WIDTH;
+  width: 100%;
+}
+
+/**
+ * Common properties in the custom rail line.
+ */
+.custom-scroll-bar-line {
+  position: absolute;
+  background-color: WIDGET_BACKGROUND_COLOR;
+}
+
+/**
+ * Properties of the line in vertical mode.
+ */
+.goog-slider-vertical .custom-scroll-bar-line {
+  height: 100%;
+  top: 0;
+  left: sub(divide(CUSTOM_SCROLL_BAR_WIDTH, 2), divide(SCROLL_BAR_RAIL_WIDTH, 2));
+  width: SCROLL_BAR_RAIL_WIDTH;
+}
+
+/**
+ * Properties of the line in horizontal mode
+ */
+.goog-slider-horizontal .custom-scroll-bar-line {
+  width: 100%;
+  top: sub(divide(CUSTOM_SCROLL_BAR_WIDTH, 2), divide(SCROLL_BAR_RAIL_WIDTH, 2));
+  left: 0;
+  height: SCROLL_BAR_RAIL_WIDTH;
+}
+
+
+/* This is for the goog slider's thumb, without it, it cannot function properly */
+.goog-slider-thumb {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  background-color: transparent;
+  background-image: url("../assets/ring.png");
+  width: CUSTOM_SCROLL_BAR_WIDTH;
+  height: CUSTOM_SCROLL_BAR_WIDTH;
+}

@@ -1,0 +1,32 @@
+.program-view {
+    background-image: url(../assets/bg.jpg);
+    padding: 6px;
+    color: white;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.program-view-name {
+    display: inline;
+}
+
+.program-view-time-start .program-view-time-label {
+    background-image: url(../assets/flag-green.png);
+}
+
+.program-view-time-end .program-view-time-label  {
+    background-image: url(../assets/flag-red.png);
+}
+
+.program-view-time-end, .program-view-time-start {
+    padding: 0 15px 0px 0;
+}
+
+.program-view-time-label {
+    background-repeat: no-repeat;
+    padding: 0 0 0 25px;
+}
+
+.program-view-time-value {
+    color: #CCB400;
+}

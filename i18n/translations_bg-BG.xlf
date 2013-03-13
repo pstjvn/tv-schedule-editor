@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="x-soy-msg-bundle" original="SoyMsgBundle" source-language="en" target-language="en" xml:space="preserve">
+    <body>
+      <trans-unit datatype="html" id="1295614462098694869">
+        <source>Preview</source>
+        <target state="translated">Предварителен преглед</target>
+        <note from="description" priority="1">Inscription on a button: preview video playback</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="2159130950882492111">
+        <source>Cancel</source>
+        <target state="translated">Отмяна</target>
+        <note from="description" priority="1">Cancel</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="2671643902824593326">
+        <source>Select date</source>
+        <target state="translated">Избор на дата</target>
+        <note from="description" priority="1">Inscription on a button: select date from callendar</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="3658146438866525141">
+        <source>This application is developed for Sysmaster Corp.© by <x id="START_LINK"/>Peter Janakiev<x id="END_LINK"/>. All right reserver for Sysmaster Corp.©</source><target state="translated">Тази програма е разработена за Sysmaster Corp.© от <x id="START_LINK"/>Петър Янакиев<x id="END_LINK"/>. Всички права са запазени за Sysmaster Corp.©</target>
+
+        <note from="description" priority="1">copyright notice</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="3768927257183755959">
+        <source>Save</source>
+        <target state="translated">Запази</target>
+        <note from="description" priority="1">Inscription on a button: save the current state of the time line</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="3797570084942068182">
+        <source>Select</source>
+        <target state="translated">Избери</target>
+        <note from="description" priority="1">Select</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="3804037606764273869">
+        <source>Cut</source>
+        <target state="translated">Отрежи</target>
+        <note from="description" priority="1">Inscription on a button: cut the item at the marker</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="3845185958891849368">
+        <source>End Time</source>
+        <target state="translated">Край</target>
+        <note from="description" priority="1">End time label</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="4204880191779081093">
+        <source>Start Time</source>
+        <target state="translated">Начало</target>
+        <note from="description" priority="1">Start time label</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="4899062938754891176">
+        <source>Program name</source>
+        <target state="translated">Заглавие</target>
+        <note from="description" priority="1">Title for the section - program name</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="5958498634454277693">
+        <source>Adds</source>
+        <target state="translated">Реклами</target>
+        <note from="description" priority="1">Adertizement video tab title</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="6205355627445317276">
+        <source>Content</source>
+        <target state="translated">Съдържание</target>
+        <note from="description" priority="1">Content tab title.</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="6421460271971606186">
+        <source>Zoom</source>
+        <target state="translated">Увеличение</target>
+        <note from="description" priority="1">Title of zoom/scale control</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="6576335986797171835">
+        <source>TV Schedule editor</source>
+        <target state="translated">Програмен редактор</target>
+        <note from="description" priority="1">TV Schedule editor app title</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="7022070615528435141">
+        <source>Delete</source>
+        <target state="translated">Изтрий</target>
+        <note from="description" priority="1">Inscription on a button: delete the item that is highlighed</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="7274592380649065891">
+        <source>Select channel</source>
+        <target state="translated">Избор на канал</target>
+        <note from="description" priority="1">Inscription on a button: select channel</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="7385160636957089888">
+        <source>Library</source>
+        <target state="translated">Колекции</target>
+        <note from="description" priority="1">Title for the library panes.</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="7831490503421072560">
+        <source>Navigate timeline</source>
+        <target state="translated">Навигация по време</target>
+        <note from="description" priority="1">Titile of scroll control</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="7938084004550907360">
+        <source>Please select one</source>
+        <target state="translated">Моля изберете</target>
+        <note from="description" priority="1">Please select one</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

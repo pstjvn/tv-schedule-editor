@@ -1,0 +1,11 @@
+.list-label {
+	position: relative;
+	top: 25px;
+	left: 15px;
+}
+.goog-tab-content {
+	border: 1px solid WIDGET_BACKGROUND_COLOR;
+	border-top: 0;
+	width: 880px;
+}
+

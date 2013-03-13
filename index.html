@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TV program schedule editor (by ..::Sysmaster.com::..)</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="build/app.css" type="text/css">
+    <script>
+      // Data source config for resource loader.
+      // DATASTREAM = 'local' // 'remote'
+
+      // App specific config
+      SYSMASTER = {
+        TIMELINE: {
+          HELP_URL: 'help/help.html', // FIXME: change this!
+          EXECPATH: '/cgi-bin/ifone.cgi',
+          VIEW: {
+            FONT_FACE : 'normal 10px Arial',
+            BACKGROUND_COLOR : '#306392',
+            SCALE_BACKGROUND_COLOR : '#abcff1',
+            CURSOR_COLOR : '#ff0000',
+            CURSOR_BACKGROUND_COLOR : '#ffffff',
+            TEXT_COLOR : '#ffffff',
+            DELIMITER_COLOR : '#06b3ec',
+            MAIN_PERIOD : 86400,
+            MAX_SCALE_FACTOR : 800,
+            SCALE_HEIGHT : 30
+          }
+        }
+      };
+    </script>
+    <!-- Include modernizr to evaluate the availability of canvas and video tag -->
+    <script type="text/javascript" src="assets/modernizr.js"></script>
+    <script>
+      // Handles the browsers that do not know what to do with canvas and video
+      // Modernizr.video.h264 != 'probably' -- if preview is to be enabled
+      if (!Modernizr.canvas || !Modernizr.canvastext || !Modernizr.raf) {
+        console.log(!Modernizr.canvas, !Modernizr.canvastext, !Modernizr.raf, Modernizr.video.h264 != 'probably')
+          alert('Your browser is not supported, please consider using a modern web browser');
+      }
+    </script>
+  </head>
+  <body>
+<!--
+    <script src="build/app-cssmap.js"></script>
+    <script src="../../library/closure/goog/base.js"></script>
+    <script src="../pstj/deps.js"></script>
+    <script src="build/deps.js"></script>
+    <script>goog.require('app');</script>
+ -->
+
+     <script src="build/app.build.js"></script>
+
+  </body>
+</html>
