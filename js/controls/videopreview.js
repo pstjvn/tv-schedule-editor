@@ -5,6 +5,13 @@ goog.require('goog.array');
 goog.require('goog.Uri');
 
 /**
+ * @fileoverview Provides preview option for the tv schedule editor. This is
+ *   not ready for production!
+ *
+ * @author regardingscot@gmail.com (Peter StJ)
+ */
+
+/**
  * Provides the video preview of the configured TV schedule. This code is not
  *   finished as support for mp4 only restricts the usage.
  *
