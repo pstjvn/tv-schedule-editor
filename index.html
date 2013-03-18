@@ -5,13 +5,14 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="build/app.css" type="text/css">
     <script>
-      // Data source config for resource loader.
+      // Data source config for resource loader. This is a pattern for the resource getters
       // DATASTREAM = 'local' // 'remote'
 
       // App specific config
       SYSMASTER = {
         TIMELINE: {
-          HELP_URL: 'help/help.html', // FIXME: change this!
+          START_DATE: (Date.now()), // Use any valid date (as milsecs since 1970)
+          HELP_URL: 'help/help.html', // FIXME: change this to wherever the help file is.
           EXECPATH: '/cgi-bin/ifone.cgi',
           VIEW: {
             FONT_FACE : 'normal 10px Arial',
