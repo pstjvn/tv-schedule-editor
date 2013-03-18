@@ -132,7 +132,7 @@ compile: tpl cssbuild
 	--root=../../templates/ \
 	--root=../../library/ \
 	-f --js=build/cssmap.js \
-	-f --define="goog.LOCALE $(LOCALE)" \
+	-f --define='goog.LOCALE="$(LOCALE)"' \
 	-o compiled \
 	-c ../../compiler/compiler.jar \
 	--output_file=$(BUILDDIR)/$(NS).build.js
