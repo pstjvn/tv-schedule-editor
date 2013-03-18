@@ -5,6 +5,9 @@ goog.require('goog.dom');
 goog.require('goog.dom.dataset');
 goog.require('goog.events.EventHandler');
 goog.require('goog.ui.Component.EventType');
+goog.require('goog.ui.DatePicker.Events');
+goog.require('goog.ui.DatePickerEvent');
+goog.require('goog.ui.PopupDatePicker');
 goog.require('goog.window');
 goog.require('pstj.configure');
 goog.require('pstj.ng.Template');
@@ -27,18 +30,48 @@ tl.control.Timeline = function() {
   this.saveButton = new goog.ui.CustomButton('', pstj.ui.CustomButtonRenderer
     .getInstance());
   this.library = new tl.MediaLibrary();
+  /**
+   * @protected
+   * @type {tl.Editor}
+   */
   this.editor = tl.Editor.getInstance();
   this.programView = new pstj.ng.Template('&nbsp;');
   this.channelSelector = new pstj.ui.Select();
   this.programControls = new tl.component.Toolbar();
   this.handler = new goog.events.EventHandler(this);
+  this.datepicker = new goog.ui.PopupDatePicker();
+  this.datepicker.render();
   // Disable preview for now
-  //this.preview = new tl.control.Perview(this.editor);
+  // this.preview = new tl.control.Perview(this.editor);
+
+  /**
+   * @private
+   * @type {function(this: tl.control.Timeline, Error, (Array|Object)): undefined}
+   */
   this.loadScheduleBound_ = goog.bind(this.loadSchedule, this);
+  /**
+   * @private
+   * @type {number}
+   */
   this.loadedItems_ = 0;
+  /**
+   * @private
+   * @type {number}
+   */
   this.waitListCount_ = 2;
+  /**
+   * @private
+   * @type {number}
+   */
   this.currentListId_ = -1;
-  this.currentWorkingDate_ = goog.now(); // + 24*60*60*1000;
+  /**
+   * The default day to start with is run time configurable.
+   * @private
+   * @type {number}
+   */
+  this.currentWorkingDate_ = +(pstj.configure.getRuntimeValue('START_DATE',
+    goog.now() + 24*60*60*1000, 'SYSMASTER.TIMELINE'));
+
   this.init();
 };
 
@@ -96,6 +129,19 @@ tl.control.Timeline.prototype.init = function() {
   }, this));
 
   //this.preview.attach(document.getElementById('video'));
+  this.handler.listen(this.datepicker, goog.ui.DatePicker.Events.CHANGE,
+    this.handleDateChange);
+};
+
+/**
+ * Handles the date chaning event from the popup.
+ * @param {goog.ui.DatePickerEvent} e The change event from the date picker.
+ * @protected
+ */
+tl.control.Timeline.prototype.handleDateChange = function(e) {
+  var d = e.date.valueOf();
+  this.currentWorkingDate_ = e.date.valueOf();
+  this.requestSchedule();
 };
 
 /**
@@ -135,20 +181,22 @@ tl.control.Timeline.prototype.handleControlAction = function(e) {
   var el = comp.getElement();
   var action = goog.dom.dataset.get(el, 'action');
   if (!goog.isNull(action)) {
-    this.handleActionByName(action);
+    this.handleActionByName(action, el);
   }
 };
 
 /**
  * Handles named action from the toolbar.
  * @param {string} name The name of the action to perform.
+ * @param {Element} el The element that is the root of the component.
  */
-tl.control.Timeline.prototype.handleActionByName = function(name) {
+tl.control.Timeline.prototype.handleActionByName = function(name, el) {
   switch (name) {
     case 'select-channel':
       this.channelSelector.open();
       break;
     case 'select-date':
+      this.datepicker.showPopup(el);
       break;
     case 'save':
       var data = tl.utils.serializeSchedule(this.editor.exportModel(),
@@ -175,7 +223,7 @@ tl.control.Timeline.prototype.handleActionByName = function(name) {
 
       break;
     case 'dump':
-      console.log(this.editor.getModel());
+      //console.log(this.editor.getModel());
       break;
   }
 };
@@ -189,7 +237,7 @@ tl.control.Timeline.prototype.handleChannelSelection = function(e) {
   e.stopPropagation();
   var model = this.channelSelector.getSelection();
   if (goog.isNull(model)) return;
-  this.currentListId_ = model.getId();
+  this.currentListId_ = +(model.getId());
   this.requestSchedule();
 };
 
