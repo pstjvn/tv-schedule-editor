@@ -359,6 +359,7 @@ tl.Editor.prototype.removeSelected = function() {
  */
 tl.Editor.prototype.split = function() {
 	var model = this.getModel();
+	if (!goog.isDefAndNotNull(model)) return;
 	if (model.length < 1) return;
 	var ct = this.getCurrentTime();
 	if (ct == 0 || ct == this.getDuration()) return;
