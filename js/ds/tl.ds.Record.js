@@ -1,5 +1,6 @@
 goog.provide('tl.ds.Record');
 
+goog.require('pstj.configure');
 goog.require('pstj.ds.ListItem');
 
 /**
@@ -43,7 +44,9 @@ goog.scope(function() {
    * A default thumbnail to use.
    * @type {string}
    */
-  p.defaultThumbnail = 'http://img.abv.bg/dHome/dragimages/abv_logo09.gif';
+  p.defaultThumbnail = pstj.configure.getRuntimeValue(
+    'DEFAULT_LIBRARY_ITEM_THUMBNAIL', 'assets/video-file.png',
+      'SYSMASTER.TIMELINE.MEDIA_LIBRARY').toString();
 
   /**
    * Check if the record is an advertisement.
