@@ -109,6 +109,14 @@ tl.Editor.prototype.cutTime_ = -1;
 tl.Editor.prototype.insertColor = '#299923';
 
 /**
+ * The opacity to apply on the inactive period item in the time line
+ * @type {number}
+ * @protected
+ */
+tl.Editor.prototype.inactiveItemOpacity = +(pstj.configure.getRuntimeValue(
+	'INACTIVE_ITEM_OPACITY', 0.6, 'SYSMASTER.TIMELINE.VIEW'));
+
+/**
  * Given the ID of the item to visualize, returns the color used for it. If
  *   one is not yet assigned one will be selected and assigned and then
  *   returned
@@ -118,7 +126,7 @@ tl.Editor.prototype.insertColor = '#299923';
 tl.Editor.prototype.getColorForPeriod = function(obj) {
 	var color = /** @type {string} */ (this.colormap.get(obj[tl.ds.defs.Program.ID]));
 	if (obj != this.currentlyHighlighedRecord_) {
-		return pstj.color.hexToRgba(color, 0.6);
+		return pstj.color.hexToRgba(color, this.inactiveItemOpacity);
 	}
 	return color;
 };
