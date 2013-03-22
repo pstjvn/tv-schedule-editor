@@ -28,13 +28,13 @@ tl.ds.defs.Program = {
  * @type {Array.<string>}
  */
 tl.ds.defs.ProgramColors  = [
-	'#ffbc00',
-	'#7277d8',
-	'#009b95',
-	'#ffb173',
-	'#ff7100',
-	'#ffcd40',
-	'#4d54d8',
-	'#33cdc7'
+'#29a837',
+'#ffa304',
+'#a443c4',
+'#b1b1b1',
+'#4377e4',
+'#e0de0f',
+'#d81c1d',
+'#ffffff'
 ];
 
