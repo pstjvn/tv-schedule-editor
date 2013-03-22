@@ -12,7 +12,7 @@ goog.require('goog.window');
 goog.require('pstj.configure');
 goog.require('pstj.ng.Template');
 goog.require('pstj.ui.CustomButtonRenderer');
-goog.require('pstj.ui.Select');
+goog.require('pstj.widget.Select');
 goog.require('tl.Editor');
 goog.require('tl.MediaLibrary');
 goog.require('tl.component.Toolbar');
@@ -36,7 +36,7 @@ tl.control.Timeline = function() {
    */
   this.editor = tl.Editor.getInstance();
   this.programView = new pstj.ng.Template('&nbsp;');
-  this.channelSelector = new pstj.ui.Select();
+  this.channelSelector = new pstj.widget.Select();
   this.programControls = new tl.component.Toolbar();
   this.handler = new goog.events.EventHandler(this);
   this.datepicker = new goog.ui.PopupDatePicker();
