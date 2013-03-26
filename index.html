@@ -41,14 +41,10 @@
         }
       };
     </script>
-    <!-- Include modernizr to evaluate the availability of canvas and video tag -->
     <script type="text/javascript" src="assets/modernizr.js"></script>
     <script>
-      // Handles the browsers that do not know what to do with canvas and video
-      // Modernizr.video.h264 != 'probably' -- if preview is to be enabled
       if (!Modernizr.canvas || !Modernizr.canvastext || !Modernizr.raf) {
-        console.log(!Modernizr.canvas, !Modernizr.canvastext, !Modernizr.raf, Modernizr.video.h264 != 'probably')
-          alert('Your browser is not supported, please consider using a modern web browser');
+          alert('This application does not support your browser. Firefox, Chrome and IE10+ are only supported');
       }
     </script>
   </head>
