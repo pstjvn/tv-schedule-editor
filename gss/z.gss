@@ -183,3 +183,23 @@ body {
 	min-height: 56%;
 	max-height: 56%;
 }
+
+/**
+ * Fix Header element to not make so much emtpiness.
+ */
+h3 {
+	margin: 0;
+	float: left;
+	border-bottom: 1px solid #06b3ec;
+}
+
+.edit-details-container {
+	float: right;
+}
+.detail-label, .detail-date {
+	border-bottom: 1px solid #06b3ec;
+}
+
+#timeline {
+	margin-top: 5px;
+}

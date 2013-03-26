@@ -10,6 +10,7 @@ goog.require('goog.ui.DatePickerEvent');
 goog.require('goog.ui.PopupDatePicker');
 goog.require('goog.window');
 goog.require('pstj.configure');
+goog.require('pstj.date.utils');
 goog.require('pstj.ng.Template');
 goog.require('pstj.ui.CustomButtonRenderer');
 goog.require('pstj.widget.Select');
@@ -46,7 +47,8 @@ tl.control.Timeline = function() {
 
   /**
    * @private
-   * @type {function(this: tl.control.Timeline, Error, (Array|Object)): undefined}
+   * @type {function(this: tl.control.Timeline, Error, (Array|Object)):
+   *   undefined}
    */
   this.loadScheduleBound_ = goog.bind(this.loadSchedule, this);
   /**
@@ -71,6 +73,17 @@ tl.control.Timeline = function() {
    */
   this.currentWorkingDate_ = +(pstj.configure.getRuntimeValue('START_DATE',
     goog.now() + 24*60*60*1000, 'SYSMASTER.TIMELINE'));
+
+  /**
+   * @private
+   * @type {string}
+   */
+  this.loadedChannelName_ = '';
+  /**
+   * @private
+   * @type {Element}
+   */
+  this.detailsContainer_ = null;
 
   this.init();
 };
@@ -131,6 +144,9 @@ tl.control.Timeline.prototype.init = function() {
   //this.preview.attach(document.getElementById('video'));
   this.handler.listen(this.datepicker, goog.ui.DatePicker.Events.CHANGE,
     this.handleDateChange);
+
+  this.detailsContainer_ = goog.dom.getElementByClass(goog.getCssName(
+    'edit-details-container'));
 };
 
 /**
@@ -238,6 +254,7 @@ tl.control.Timeline.prototype.handleChannelSelection = function(e) {
   var model = this.channelSelector.getSelection();
   if (goog.isNull(model)) return;
   this.currentListId_ = +(model.getId());
+  this.loadedChannelName_ = /** @type {string} */ (model.getProp('name'));
   this.requestSchedule();
 };
 
@@ -249,6 +266,10 @@ tl.control.Timeline.prototype.requestSchedule = function() {
   if (this.currentListId_ == -1) return;
   tl.loader.getProgram( /** @type {number} */ (this.currentListId_),
     this.currentWorkingDate_, this.loadScheduleBound_);
+  this.detailsContainer_.innerHTML = tl.template.details({
+    channelname: this.loadedChannelName_,
+    date: pstj.date.utils.renderTimeSafe(this.currentWorkingDate_)
+  });
 };
 
 /**

@@ -8,6 +8,9 @@
   <div class="{css base}">
     <h3>{msg desc="TV Schedule editor app title"}TV Schedule editor{/msg}</h3>
 
+    <div class="{css edit-details-container}"></div>
+
+    <div style="clear: both;"></div>
     <div id="timeline" class="{css loading}"></div>
 
     <div class="{css goog-slider} {css zoom-slider}">
@@ -82,6 +85,18 @@
       &nbsp;
       <span class="{css program-view-time-end}" data-model="end_time" data-filter='timeoffset(HH:mm:ss)|prepend(<span class="{css program-view-time-label}">{msg desc="End time label"}End Time{/msg}:&nbsp</span><span class="{css program-view-time-value}">)|append(</span>)'></span>
     </div>
+  </div>
+{/template}
+
+/**
+ * Provides the details for the edited channel and the date.
+ * @param channelname The name of the currently edited channel.
+ * @param date The date that is being edited.
+ */
+{template .details}
+  <div class="{css channel-date-details}">
+    <span class="{css detail-label}">{msg desc="Editing channel name label"}Editing:{/msg}</span>{sp}{$channelname}{sp}
+    <span class="{css detail-date}">{msg desc="Date label"}Date:{/msg}</span>{sp}{$date}
   </div>
 {/template}
 
