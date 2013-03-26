@@ -263,15 +263,15 @@ tl.control.Timeline.prototype.loadSchedule = function(err, data) {
     throw new Error('The data is not a list.');
   }
   this.editor.setModel(data);
+  this.handlerTimelineSelection_();
 };
 
 /**
  * Handles the event of item selection in the time line editor. This event is
  * fired when the suer clicks in the view side of the time line editor.
- * @param {goog.events.Event} e The event fired from the editor instance.
  * @private
  */
-tl.control.Timeline.prototype.handlerTimelineSelection_ = function(e) {
+tl.control.Timeline.prototype.handlerTimelineSelection_ = function() {
   var currentItem = this.editor.getCurrentSelectionData();
   this.programView.setModel(currentItem || {});
 };

@@ -44,6 +44,11 @@ tl.Editor = function() {
 	this.colormap.loadMap(tl.ds.defs.ProgramColors);
 	this.dayOffset_ = tl.utils.getDays((goog.now() / 1000) << 0);
 	this.cutAnimations = [];
+	/**
+	 * @private
+	 * @type {Object}
+	 */
+	this.currentlyHighlighedRecord_ = null;
 };
 goog.inherits(tl.Editor, pstj.graphics.Timeline);
 goog.addSingletonGetter(tl.Editor);
@@ -233,6 +238,7 @@ tl.Editor.prototype.transformModel = function(model, inwards) {
  */
 tl.Editor.prototype.setModel = function(model) {
 	goog.base(this, 'setModel', model);
+	this.currentlyHighlighedRecord_ = null;
 	this.update();
 };
 
