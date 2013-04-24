@@ -2,11 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="SoyMsgBundle" datatype="x-soy-msg-bundle" xml:space="preserve" source-language="en" target-language="en">
     <body>
-      <trans-unit id="1295614462098694869" datatype="html">
-        <source>Preview</source>
-        <target/>
-        <note priority="1" from="description">Inscription on a button: preview video playback</note>
-      </trans-unit>
       <trans-unit id="2159130950882492111" datatype="html">
         <source>Cancel</source>
         <target/>
@@ -17,8 +12,8 @@
         <target/>
         <note priority="1" from="description">Inscription on a button: select date from callendar</note>
       </trans-unit>
-      <trans-unit id="3658146438866525141" datatype="html">
-        <source>This application is developed for Sysmaster Corp.© by <x id="START_LINK"/>Peter Janakiev<x id="END_LINK"/>. All right reserver for Sysmaster Corp.©</source>
+      <trans-unit id="3335988243793105651" datatype="html">
+        <source>Copyright © 2001 - 2013 SysMaster Corp. All rights reserved.</source>
         <target/>
         <note priority="1" from="description">copyright notice</note>
       </trans-unit>
@@ -72,6 +67,16 @@
         <target/>
         <note priority="1" from="description">TV Schedule editor app title</note>
       </trans-unit>
+      <trans-unit id="6667394582795828138" datatype="html">
+        <source>Editing:</source>
+        <target/>
+        <note priority="1" from="description">Editing channel name label</note>
+      </trans-unit>
+      <trans-unit id="6899410641137821757" datatype="html">
+        <source>Date:</source>
+        <target/>
+        <note priority="1" from="description">Date label</note>
+      </trans-unit>
       <trans-unit id="7022070615528435141" datatype="html">
         <source>Delete</source>
         <target/>
@@ -91,6 +96,11 @@
         <source>Navigate timeline</source>
         <target/>
         <note priority="1" from="description">Titile of scroll control</note>
+      </trans-unit>
+      <trans-unit id="7911416166208830577" datatype="html">
+        <source>Help</source>
+        <target/>
+        <note priority="1" from="description">Inscription on a button: display help</note>
       </trans-unit>
       <trans-unit id="7938084004550907360" datatype="html">
         <source>Please select one</source>
